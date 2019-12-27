@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>FCC Survey Form Project</title>
+    <meta name="description" content="FCC Survey Form Project" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="styles.css?v=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">Haunted Attraction Survey</h1>
+        <p id="description" class="description text-center">
+          Thank you for your feedback
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label for="name" id="name-label">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Your name..."
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email" id="email-label">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Your email address..."
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="number" id="number-label"
+            >Age<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Your age..."
+          />
+        </div>
+        <div class="form-group">
+          <p>What is your level of experience with haunted attractions?</p>
+          <select
+            id="dropdown"
+            name="experience-level"
+            class="form-control"
+            required
+          >
+            <option disabled selected value>Please choose one</option>
+            <option value="veteran">Veteran</option>
+            <option value="regular">Regular</option>
+            <option value="newbie">Newbie</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Would you recommend this haunted attraction to a friend?</p>
+          <label>
+            <input
+              type="radio"
+              id="definitely"
+              name="user-recommend"
+              value="definitely"
+              class="input-radio"
+              checked
+            />Definitely
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="maybe"
+              name="user-recommend"
+              value="maybe"
+              class="input-radio"
+            />Maybe
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="no"
+              name="user-recommend"
+              value="no"
+              class="input-radio"
+            />Not a chance
+          </label>
+        </div>
+        <div class="form-group">
+          <p>
+            What were your favorite parts?
+            <span class="clue">(Check all that apply)</span>
+          </p>
+          <label>
+            <input
+              type="checkbox"
+              name="favorites"
+              value="actors"
+              class="input-checkbox"
+            />Actors
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="favorites"
+              value="props"
+              class="input-checkbox"
+            />Props
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="favorites"
+              value="costumes"
+              class="input-checkbox"
+            />Costumes
+          </label>
+        </div>
+        <div class="form-group">
+          <p>How would you rate our haunted attraction?</p>
+          <label>
+            <input
+              type="radio"
+              id="scary"
+              name="user-rating"
+              value="scary"
+              class="input-radio"
+            />Scary
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="very scary"
+              name="user-rating"
+              value="very scary"
+              checked
+              class="input-radio"
+            />Very scary
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="too scary"
+              name="user-rating"
+              value="too scary"
+              class="input-radio"
+            />Too scary
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="not scary"
+              name="user-rating"
+              value="not scary"
+              class="input-radio"
+            />Not scary at all
+          </label>
+        </div>
+        <div class="form-group">
+          <p>Any other comments?</p>
+          <textarea
+            id="comments"
+            name="comment"
+            class="input-textarea"
+            placeholder="Additional comments here..."
+          >
+          </textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+          <button type="reset" id="reset" class="reset-button">Reset</button>
+        </div>
+      </form>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
